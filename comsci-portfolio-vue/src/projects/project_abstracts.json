@@ -1,0 +1,45 @@
+{
+    "projects": [
+      {
+        "projectName": "Project1",
+        "id": "001",
+        "imageName": "image1.jpg",
+        "fileName": "projectHTML.html",
+        "date": "2023-06-04",
+        "abstract": "Project1 addresses environmental sustainability. It aims to explore innovative strategies, including recycling programs and development of renewable energy sources. The focus is on creating sustainable solutions that are practical and effective."
+      },
+      {
+        "projectName": "Project2",
+        "id": "002",
+        "imageName": "image2.jpg",
+        "fileName": "projectHTML.html",
+        "date": "2023-06-04",
+        "abstract": "Project2 delves into advanced machine learning, emphasizing the utility of neural networks and deep learning algorithms. The project seeks to explore these techniques and understand their potential in various real-world applications."
+      },
+      {
+        "projectName": "Project3",
+        "id": "003",
+        "imageName": "image3.jpg",
+        "fileName": "projectHTML.html",
+        "date": "2023-06-04",
+        "abstract": "Project3 applies blockchain technology in healthcare. The focus is on enhancing security and efficiency in patient record exchange systems, with the goal of improving overall patient care and streamlining medical records management."
+      },
+      {
+        "projectName": "Project4",
+        "id": "004",
+        "imageName": "image4.jpg",
+        "fileName": "file4.txt",
+        "date": "2023-06-04",
+        "abstract": "Project4 leverages data analytics to optimize logistics, specifically aiming at efficiency in supply chain management. The project's goal is to identify inefficiencies in current systems and propose data-driven solutions."
+      },
+      {
+        "projectName": "Project5",
+        "id": "005",
+        "imageName": "image5.jpg",
+        "fileName": "file5.txt",
+        "date": "2023-06-04",
+        "abstract": "Project5 investigates the potential of renewable energy sources, evaluating their wide-scale applications in various sectors. The project aims to understand the feasibility and impact of these energy sources on a broader scale."
+      }
+    ]
+  }
+  
