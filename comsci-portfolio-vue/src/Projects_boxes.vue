@@ -19,12 +19,12 @@ export default {
 <template>
     <div class="Projects_boxes">
         <div class="Projects_boxes_content">
-            <a v-for="box in boxes" :key="box.id" class="Project_box" :href="`/src/projects/${box.fileName}`">
+            <div v-for="box in boxes" :key="box.id" class="Project_box" :href="`/src/projects/${box.fileName}`">
                 <img :src="`./src/assets/images/project_images/${box.imageName}`" alt="" class="Project_box_image"/>
                 <h2 class="Project_box_title">{{box.projectName}}</h2>
                 <div class="Project_box_description">{{ box.abstract.slice(0, 150) }}...</div>
                 <div class="Project_box_date">{{box.date}}</div>
-            </a>
+            </div>
         </div>
     </div>
 </template>
