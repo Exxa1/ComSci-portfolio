@@ -1,21 +1,5 @@
-<script>
-import Banner from './Banner.vue';
-import Projects_boxes from './Projects_boxes.vue';
-
-export default {
-
-  components: {
-    Banner,
-    Projects_boxes
-  },
-}
-</script>
+<!-- The main file for the project, where the views set up to be the current route -->
 
 <template>
-  <Banner />
-  <Projects_boxes />
+  <router-view></router-view>
 </template>
-
-<style>
-
-</style>
