@@ -12,6 +12,7 @@ export default {
         // Fetch the blog post data using the slug prop
     }
 
+
 }
 </script>
 
