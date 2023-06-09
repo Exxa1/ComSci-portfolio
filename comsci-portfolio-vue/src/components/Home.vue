@@ -1,8 +1,8 @@
 <!-- The home page -->
 
 <script>
-import Banner from './Banner.vue';
-import Projects_boxes from './Projects_boxes.vue';
+import Banner from '@/components/Banner.vue';
+import Projects_boxes from '@/components/Projects_boxes.vue';
 
 export default {
 name: 'Home',

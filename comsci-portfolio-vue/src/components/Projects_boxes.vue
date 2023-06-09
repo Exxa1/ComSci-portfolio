@@ -58,6 +58,7 @@ export default {
 }
 
 .Project_box{
+    position: relative;
     margin: 0 auto;
     max-width: 400px;
     height: 500px;
@@ -90,7 +91,10 @@ export default {
 }
 
 .Project_box_date{
-    padding: 1rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem;
     font-style: italic;
     text-align: right;
 }
