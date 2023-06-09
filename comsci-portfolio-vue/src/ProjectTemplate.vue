@@ -6,14 +6,13 @@ export default {
     name: 'ProjectTemplate',
     data() {
         return {
-            title: "tile",
-            projectData: {},
+            proj: {},
         }
     },
     async created() {
         const fileName = this.$route.params.slug;
         const importedProject = await import(`@/projects/${fileName}.json`);
-        this.projectData = importedProject.default;
+        this.proj = importedProject.default;
     }
 
 
@@ -22,8 +21,106 @@ export default {
 
 
 <template>
-<div class="blog-template">
-    <h1>Project Template Title</h1>
-    <div>This is the page that opens on <i>{{ projectData.projectName }}</i> route</div>
-</div>
+ <body v-if="Object.keys(proj).length">
+    <div class="content-max-width">
+    <!-- <div class="bottomnav">
+      <div class="topnav">
+        <div>Go back</div>
+      </div>
+    </div> -->
+    <a href="/" class="project-goback">Go back</a>
+    <h2 class="project-title">{{proj.projectName.split(' ').slice(0, -2).join(' ')}} <span class="title-highlight"> {{proj.projectName.split(' ').slice(-2).join(' ')}} </span></h2>
+
+    <div class="project-resources">
+      <div class="rq" v-if="proj.researchQuestion" >Research Question: <span class="info">{{ proj.researchQuestion }}</span></div>
+      <div class="Time: ">timeframe: <span class="info">from {{proj.startTime}} to {{ proj.endTime }}</span></div>
+      <div class="participants">participants: <span class="info" v-if="proj.participants.length > 0">{{ proj.participants.length }}</span> <span class="info" v-else>solo project</span></div>
+      <div class="file">Research paper: <span class="info">[file]</span></div>
+    </div>
+
+    <div v-html="proj.content"></div>
+ 
+    <div class="img-intext">
+    <img :src="'src/assets/images/project_images/' + proj.heroImgName">
+    <div class="caption">Caption</div>
+    </div>
+
+  </div>
+  </body>
 </template>
+
+
+<style>
+.project-goback {
+    color: white;
+    background-color: var(--c-dark);
+    position: fixed;
+    right: 1rem;
+    top: 0.5rem;
+    /* inset: 1rem 1rem auto auto; */
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--c-dark);
+    border-radius: 2rem;
+    transition: 0.2s ease;
+}
+
+a.project-goback, a.project-goback:visited {
+    /* all: unset; */
+    color: white;
+    /* background-color: inherit; */
+    text-decoration: none;
+}
+
+a.project-goback:hover {
+    color: var(--c-dark);
+    background-color: var(--c-light);
+}
+
+.project-title {
+    max-width: 40rem;
+    font-size: 3rem;
+    text-align: center;
+    margin: 20vh auto;
+    /* padding-right: 40%; */
+}
+
+.project-title .title-highlight {
+    /* display: inline-block; */
+    background-color: var(--c-dark);
+    color: var(--c-light);
+    padding: 0.5rem;
+    /* mix-blend-mode: difference; */
+}
+
+.project-resources {
+    margin: 2rem 0;
+}
+
+.project-resources .info {
+    font-style: italic;
+}
+
+.img-intext {
+    max-width: inherit;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.img-intext img{
+    display: block;
+    width: 40rem;
+    max-width: inherit;
+    max-height: 98vh;
+    margin: 0.6rem auto;
+}
+
+.img-midtext .caption {
+    font-style: italic;
+}
+
+.content-max-width{
+    max-width: 100%;
+    padding: 0 8px;
+    margin:auto;
+}
+</style>

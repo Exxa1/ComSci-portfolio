@@ -21,7 +21,6 @@ export default {
         importedProjects[importedProject.id] = importedProject;
     }
     this.importedProjects = importedProjects
-    console.log(importedProjects['1']['abstract'].slice(0, 100) + '...')
 }
 }
 
