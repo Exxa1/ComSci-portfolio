@@ -3,6 +3,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import BlogTemplate from "@/BlogTemplate.vue";
 import Home from "@/Home.vue";
+import ProjectTemplate from "@/ProjectTemplate.vue"
 
 const routes = [
     {
@@ -16,6 +17,11 @@ const routes = [
     component: BlogTemplate,
     props: true,
   },
+  {
+    path: "/project-:slug",
+    name: "ProjectTemplate",
+    component: ProjectTemplate,
+  }
   // Add more routes here
 ];
 

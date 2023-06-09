@@ -1,30 +1,40 @@
 <script>
-import project_abstracts from './projects/project_abstracts.json'
+// console.log(project_abstracts)
+// console.log(project_abstracts['projects'][0])
 
-console.log(project_abstracts)
 
 export default {
   name: 'Projects_boxes',
   data(){
     return{
-      boxes: project_abstracts.projects,
+      importedProjects: {},
+
     }
   },
-  created(){
-    console.log(this.boxes)
-  }
+  async created(){
+    const files = await import.meta.glob('@/projects/*')
+
+    const importedProjects = {}
+    for (const projectFilePath in files){
+        const response = await fetch(projectFilePath);
+        const importedProject = await response.json();
+        importedProjects[importedProject.id] = importedProject;
+    }
+    this.importedProjects = importedProjects
+    console.log(importedProjects['1']['abstract'].slice(0, 100) + '...')
+}
 }
 
 </script>
 <template>
     <div class="Projects_boxes">
         <div class="Projects_boxes_content">
-            <div v-for="box in boxes" :key="box.id" class="Project_box" :href="`/src/projects/${box.fileName}`">
-                <img :src="`./src/assets/images/project_images/${box.imageName}`" alt="" class="Project_box_image"/>
+            <a v-for="box in Object.values(importedProjects)" :key="box.id" class="Project_box" :href="`/project-${box.projectURL}`">
+                <img :src="`./src/assets/images/project_images/${box.heroImgName}`" alt="" class="Project_box_image"/>
                 <h2 class="Project_box_title">{{box.projectName}}</h2>
-                <div class="Project_box_description">{{ box.abstract.slice(0, 150) }}...</div>
-                <div class="Project_box_date">{{box.date}}</div>
-            </div>
+                <div class="Project_box_description">{{ box['abstract'].slice(0, 100) }}...</div>
+                <div class="Project_box_date">{{box.endTime}}</div>
+            </a>
         </div>
     </div>
 </template>
