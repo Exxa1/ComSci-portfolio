@@ -1,22 +1,20 @@
 // The file where the routes are defined and imported into the main.js file
 
 import { createRouter, createWebHistory } from "vue-router";
-import BlogTemplate from "@/BlogTemplate.vue";
-import Home from "@/Home.vue";
-import ProjectTemplate from "@/ProjectTemplate.vue"
+import Home from "@/components/Home.vue";
+import ProjectTemplate from "@/components/ProjectTemplate.vue"
+import NotFound from "@/components/NotFound.vue"
 
 const routes = [
+    // will match everything and put it under `$route.params.pathMatch`
+    { path: '/:pathMatch(.*)*',
+     name: 'NotFound',
+      component: NotFound },
     {
     path: "/",
     name: "Home",
     component: Home,
 },
-  {
-    path: "/blog",
-    name: "BlogTemplate",
-    component: BlogTemplate,
-    props: true,
-  },
   {
     path: "/project-:slug",
     name: "ProjectTemplate",

@@ -47,6 +47,12 @@ export default {
 
   </div>
   </body>
+  <!-- <body v-else>
+    <div class="content-max-width">
+      <h1>Project not found</h1>
+      <a href="/" style="text-decoration: underline;">Go back home</a>
+    </div>
+</body> -->
 </template>
 
 
