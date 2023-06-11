@@ -1,0 +1,22 @@
+{
+    "id": 1,
+    "projectName": "Ambulance alarm using Machine Learning",
+    "projectURL": "ambularm",
+    "keywords": ["ML", "Raspberry", "Android"],
+    "languages": ["Python", "Java"],
+    "researchQuestion": "How to alert car drivers for an ambulance siren, to avoid delaying emergency vehicles?",
+    "participants": ["Hussein Al-Saidi"],
+    "startTime": "2023-02-12",
+    "endTime": "2023-05-24",
+    "notes": {
+      "supervisor": "Sune Thomas Bernth Nielsen",
+      "links": {
+        "researchPaperURL": "",
+        "githubPage": "https://github.com/Exxa1/ambularm"
+      }
+    },
+    "heroImgName": "ambularm-logo.png",
+    "summary": "This project aims to utilize artificial intelligence to detect emergency vehicles and alert the driver in cars with loud music.",
+    "content": "<h2>Abstract</h2><p>This study investigates the viability of using sound detection for road safety. Specifically looking into the possibilities of detecting emergency vehicle sirens. The advancements in soundproofing and noise canceling require new tools to improve road safety. A study made by Dr. Simon Moore in 2017, stated that drivers who listen to music louder than 96dB, will lose about 20% of their concentration. A driver in a soundproofed car only has a very short time to react to the ambulance. Our prototype to offer a solution has the capabilities to recognize ambulance sirens from low sound levels, in traffic situations as well. It connects to an Android App, sending alerts within 2 seconds after a siren sound becomes audible. The prototype provides a proof of concept, however, it amplifies the faults of the idea as well. Due to not being able to assess the full traffic situation, the prototype cannot decide if the user is in the ambulance’s way or not. This can lead to several false alarms, limiting the real-life usability of the system. The research starts by looking at advancements in sound detection in the past decade. Several studies are reviewed about ambulance detection, which paths the way for the design choices. For the prototype the YAMNet pre-trained sound classifier neural network is implemented on a Raspberry Pi, communicating to an Android App. To determine the true viability of the prototype more excessive testing is required. However, this study elucidates a promising avenue for further exploration and development in sound-detecting driver assistance systems. </p>"
+  }
+  

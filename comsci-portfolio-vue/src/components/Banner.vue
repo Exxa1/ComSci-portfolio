@@ -64,7 +64,7 @@ export default {
   grid-area: 1 / 2 / 3 / 3;
   width: 50%;
   aspect-ratio: 1 / 1;
-  background-image: url('src/assets/images/banner_image.jpg');
+  background-image: url('../assets/images/banner_image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

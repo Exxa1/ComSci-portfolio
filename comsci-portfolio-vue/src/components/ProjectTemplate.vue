@@ -2,6 +2,11 @@
 
 <script>
 
+function getImageUrl(url) {
+  return new URL(`/src/assets/images/project_images/${url}`, import.meta.url).href;
+}
+
+
 export default {
     name: 'ProjectTemplate',
     data() {
@@ -9,19 +14,21 @@ export default {
             proj: {},
         }
     },
+    methods: {
+        getImageUrl,
+    },
     async created() {
         const fileName = this.$route.params.slug;
         const importedProject = await import(`@/projects/${fileName}.json`);
         this.proj = importedProject.default;
     }
-
-
 }
+
 </script>
 
 
 <template>
- <body v-if="Object.keys(proj).length">
+ <body v-if="Object.keys(proj).length" class="project-page">
     <div class="content-max-width">
     <!-- <div class="bottomnav">
       <div class="topnav">
@@ -29,20 +36,27 @@ export default {
       </div>
     </div> -->
     <a href="/" class="project-goback">Go back</a>
-    <h2 class="project-title">{{proj.projectName.split(' ').slice(0, -2).join(' ')}} <span class="title-highlight"> {{proj.projectName.split(' ').slice(-2).join(' ')}} </span></h2>
+    <h1 class="project-title">{{proj.projectName.split(' ').slice(0, -2).join(' ')}} <span class="title-highlight"> {{proj.projectName.split(' ').slice(-2).join(' ')}} </span></h1>
 
     <div class="project-resources">
       <div class="rq" v-if="proj.researchQuestion" >Research Question: <span class="info">{{ proj.researchQuestion }}</span></div>
       <div class="Time: ">timeframe: <span class="info">from {{proj.startTime}} to {{ proj.endTime }}</span></div>
-      <div class="participants">participants: <span class="info" v-if="proj.participants.length > 0">{{ proj.participants.length }}</span> <span class="info" v-else>solo project</span></div>
-      <div class="file">Research paper: <span class="info">[file]</span></div>
+      <div class="participants">participants: <span class="info" v-if="proj.participants.length > 0">{{ proj.participants.length+1 }}</span> <span class="info" v-else>solo project</span></div>
+      <div class="file" v-if="proj.notes.links.researchPaperURL">Research paper: <span class="info">{{proj.notes.links.researchPaperURL}}</span></div>
+      <div class="file" v-if="proj.notes.links.githubPage">GitHub page: <span class="info"><a :href="proj.notes.links.githubPage" target="_blank">{{proj.notes.links.githubPage}}</a></span></div>
+      <div>Topics: <span class="info">{{ proj.keywords.join(', ') }}</span></div>
+      <div>Programming languages: <span class="info">{{ proj.languages.join(', ') }}</span></div>
     </div>
 
+    <div class="description">
+        <h2>Summary</h2>
+        <p>{{ proj.summary }}</p>
+    </div>
     <div v-html="proj.content"></div>
  
     <div class="img-intext">
-    <img :src="'src/assets/images/project_images/' + proj.heroImgName">
-    <div class="caption">Caption</div>
+    <img :src="getImageUrl(proj.heroImgName)">
+    <!-- <div class="caption">Caption</div> -->
     </div>
 
   </div>
@@ -57,6 +71,13 @@ export default {
 
 
 <style>
+
+.project-page h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
 .project-goback {
     color: white;
     background-color: var(--c-dark);
