@@ -1,0 +1,22 @@
+{
+    "id": 3,
+    "projectName": "Computerscience portfolio website",
+    "projectURL": "comsci-portfolio",
+    "keywords": ["Web development", "Frontend", "Backend"],
+    "languages": ["Vue", "JavaScript", "HTML", "CSS"],
+    "researchQuestion": "",
+    "participants": [],
+    "startTime": "2023-06-01",
+    "endTime": "2023-06-10",
+    "notes": {
+      "supervisor": "Sune Thomas Bernth Nielsen",
+      "links": {
+        "researchPaperURL": "",
+        "githubPage": "https://github.com/Exxa1/ambularm"
+      }
+    },
+    "heroImgName": "comsci-portfolio.png",
+    "summary": "Making a portfolio website to portray my computer science skills, using state-of-the-art tech.",
+    "content": "<h2>Quick overview</h2><p>This website was created using the Vue Javascript framework. All the code and design are completely made from scratch by me, using no templates. Creating this space allowed me to learn about up-to-date tools for website making. The website is built using the Vite build tool, and node.js for the backend. Since previously I built frontend using plain HTML, CSS, and Js, this project had a steep learning curve. It gave me insights into what is possible with modern tools and I learned a lot about how to work with javascript frameworks.</p>"
+  }
+  

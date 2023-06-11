@@ -3,25 +3,31 @@
 // console.log(project_abstracts['projects'][0])
 
 
-export default {
-  name: 'Projects_boxes',
-  data(){
-    return{
-      importedProjects: {},
+function getImageUrl(url) {
+  return new URL(`/src/assets/images/project_images/${url}`, import.meta.url).href;
+}
 
-    }
-  },
-  async created(){
-    const files = await import.meta.glob('@/projects/*')
+export default {
+    name: 'Projects_boxes',
+    data(){
+        return{
+            importedProjects: {},
+
+        }
+    },
+    methods: {
+        getImageUrl,
+    },
+    async created(){
+    const files = await import.meta.globEager('@/projects/*');
 
     const importedProjects = {}
     for (const projectFilePath in files){
-        const response = await fetch(projectFilePath);
-        const importedProject = await response.json();
+        const importedProject = files[projectFilePath].default;
         importedProjects[importedProject.id] = importedProject;
     }
     this.importedProjects = importedProjects
-}
+    }
 }
 
 </script>
@@ -29,9 +35,9 @@ export default {
     <div class="Projects_boxes">
         <div class="Projects_boxes_content">
             <a v-for="box in Object.values(importedProjects)" :key="box.id" class="Project_box" :href="`/project-${box.projectURL}`">
-                <img :src="`./src/assets/images/project_images/${box.heroImgName}`" alt="" class="Project_box_image"/>
+                <img :src="getImageUrl(box.heroImgName)" alt="" class="Project_box_image"/>
                 <h2 class="Project_box_title">{{box.projectName}}</h2>
-                <div class="Project_box_description">{{ box['abstract'].slice(0, 100) }}...</div>
+                <div class="Project_box_description">{{ box['summary'].slice(0, 100) }}...</div>
                 <div class="Project_box_date">{{box.endTime}}</div>
             </a>
         </div>
@@ -61,11 +67,18 @@ export default {
     position: relative;
     margin: 0 auto;
     max-width: 400px;
-    height: 500px;
+    min-height: 500px;
+    padding-bottom: 2rem;
     border: 1px solid black;
     background-color: var(--c-white);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow .3s ease-in-out;
+}
+
+a.Project_box{
+    text-decoration: none;
+    color: var(--c-dark);
 }
 
 .Project_box_image{
@@ -78,8 +91,13 @@ export default {
     /* border-radius: 5px 5px 0 0; */
 }
 
+.Project_box:hover {
+    box-shadow: 0 0 0 3px var(--c-dark);
+}
+
 .Project_box:hover .Project_box_image{
     filter: grayscale(10%);
+
 }
 
 .Project_box_title{

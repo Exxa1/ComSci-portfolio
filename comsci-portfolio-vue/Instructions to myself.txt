@@ -1,0 +1,12 @@
+To update the website, run in the project folder (comsci-portfolio-vue):
+npm run build
+firebase deploy
+
+
+
+If in powershell script is prevented from running, use this to bypass the permission (or use command line):
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+
+This tutorial was used for the firebase setup:
+https://softauthor.com/deploy-vue-js-app-on-firebase-hosting/
