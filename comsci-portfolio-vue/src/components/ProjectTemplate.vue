@@ -35,7 +35,7 @@ export default {
         <div>Go back</div>
       </div>
     </div> -->
-    <a href="/" class="project-goback">Go back</a>
+    <a href="/#projects" class="project-goback">Go back</a>
     <h1 class="project-title">{{proj.projectName.split(' ').slice(0, -2).join(' ')}} <span class="title-highlight"> {{proj.projectName.split(' ').slice(-2).join(' ')}} </span></h1>
 
     <div class="project-resources">
@@ -45,7 +45,7 @@ export default {
       <div class="file" v-if="proj.notes.links.researchPaperURL">Research paper: <span class="info">{{proj.notes.links.researchPaperURL}}</span></div>
       <div class="file" v-if="proj.notes.links.githubPage">GitHub page: <span class="info"><a :href="proj.notes.links.githubPage" target="_blank">{{proj.notes.links.githubPage}}</a></span></div>
       <div>Topics: <span class="info">{{ proj.keywords.join(', ') }}</span></div>
-      <div>Programming languages: <span class="info">{{ proj.languages.join(', ') }}</span></div>
+      <div v-if="proj.languages">Programming languages: <span class="info">{{ proj.languages.join(', ') }}</span></div>
     </div>
 
     <div class="description">
@@ -71,6 +71,10 @@ export default {
 
 
 <style>
+
+h1 {
+    text-wrap: balance;
+}
 
 .project-page h2 {
     margin-top: 3rem;
@@ -121,6 +125,11 @@ a.project-goback:hover {
 
 .project-resources {
     margin: 2rem 0;
+}
+
+.project-resources div {
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
 }
 
 .project-resources .info {

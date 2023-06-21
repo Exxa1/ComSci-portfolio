@@ -1,6 +1,6 @@
 {
     "id": 5,
-    "projectName": "Website for a small business with Wordress",
+    "projectName": "Website for a small business - with Wordress",
     "projectURL": "coaching-website",
     "keywords": ["Wordpress", "Web development", "Frontend"],
     "languages": [],
@@ -8,9 +8,15 @@
     "participants": [],
     "startTime": "2023-01-20",
     "endTime": "2023-05-01",
-    "notes": [],
-    "heroImgName": "coacing-website.jpg",
-    "summary": "This project aims to test the capabilities of quantum computing in performing large-scale simulations, with a view to compare its performance with classical computers.",
+    "notes": {
+      "supervisor": "",
+      "links": {
+        "researchPaperURL": "",
+        "githubPage": ""
+      }
+    },
+    "heroImgName": "beyondthenotes.png",
+    "summary": "This website was created using wordpress. It helps to express the ",
     "content": "<h2>Introduction</h2><p>This is the introduction to our project. <b>We have emphasized important text with bold</b>. <i>We have also included italic text for stylistic emphasis.</i></p>"
   }
   

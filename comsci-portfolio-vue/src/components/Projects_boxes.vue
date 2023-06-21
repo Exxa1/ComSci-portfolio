@@ -32,7 +32,7 @@ export default {
 
 </script>
 <template>
-    <div class="Projects_boxes">
+    <div class="Projects_boxes" id="projects">
         <div class="Projects_boxes_content">
             <a v-for="box in Object.values(importedProjects)" :key="box.id" class="Project_box" :href="`/project-${box.projectURL}`">
                 <img :src="getImageUrl(box.heroImgName)" alt="" class="Project_box_image"/>
@@ -72,7 +72,7 @@ export default {
     border: 1px solid black;
     background-color: var(--c-white);
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
     transition: box-shadow .3s ease-in-out;
 }
 
@@ -88,11 +88,13 @@ a.Project_box{
     object-fit: cover;
     /* object-fit: contain; */
     filter: grayscale(100%);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     /* border-radius: 5px 5px 0 0; */
 }
 
 .Project_box:hover {
-    box-shadow: 0 0 0 3px var(--c-dark);
+    box-shadow: 0 0 0 2px var(--c-dark);
 }
 
 .Project_box:hover .Project_box_image{
@@ -102,6 +104,7 @@ a.Project_box{
 
 .Project_box_title{
     padding: 1rem;
+    text-wrap: balance;
 }
 
 .Project_box_description{
