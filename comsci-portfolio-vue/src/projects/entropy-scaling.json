@@ -1,0 +1,22 @@
+{
+    "id": 2,
+    "projectName": "Excess entropy scaling in - Computer Simulations",
+    "projectURL": "entropy-scaling",
+    "keywords": ["Physics", "Simulation", "Python"],
+    "languages": ["Python"],
+    "researchQuestion": "How does excess entropy control transport properties in supercooled ternary mixtures?",
+    "participants": ["Su Mei Gwen Ho, Andrea G. Martínez"],
+    "startTime": "2022-09-01",
+    "endTime": "2023-01-10",
+    "notes": {
+      "supervisor": "Trond Ingebrigtsen",
+      "links": {
+        "researchPaperURL": "",
+        "githubPage": "https://zenodo.org/record/7650090"
+      }
+    },
+    "heroImgName": "entropy-scaling.png",
+    "summary": "The project is a follow up on an advanced ground breaking research on excess entropy scaling in supercooled mixtures. Using molecular dynamics computer simulations.",
+    "content": "<h2>Abstract</h2><p>This report investigates how excess entropy scaling affects transport coefficients for ternary (threecomponent) supercooled mixtures, building upon previous studies which have been conducted for large systems of supercooled single-component and binary mixtures. The results indicate quasiuniversal excess entropy scaling across different temperatures for a given mixture, a collapse which continues to hold across the two compositions of the KA mixture, KA 8:2:2 and KA 8:2:4; as well as across two different models, the KA model and the WS model. This quasi-universality appears to operate in a similar, but not equivalent manner to the correlation found for binary mixtures in a previous study. More research is required to delve into how excess entropy scaling works, and how multi-component supercooled systems can take advantage of this functionality. <br> <a href='src/assets/PDFs/excess_entropy_scaling_aronkuna.pdf' download='entropyscaling'>Clink here to download the research paper</a></p>"
+  }
+  

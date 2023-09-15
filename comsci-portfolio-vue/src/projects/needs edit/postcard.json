@@ -1,0 +1,22 @@
+{
+    "id": 20,
+    "projectName": "Video postcard project",
+    "projectURL": "postcard",
+    "keywords": ["Web development", "Frontend", "Backend"],
+    "languages": ["Vue", "JavaScript", "HTML", "CSS"],
+    "researchQuestion": "",
+    "participants": [],
+    "startTime": "2023-06-20",
+    "endTime": "2023-06-20",
+    "notes": {
+      "supervisor": "",
+      "links": {
+        "researchPaperURL": "",
+        "githubPage": "https://github.com/Exxa1/ambularm"
+      }
+    },
+    "heroImgName": "comsci-portfolio.png",
+    "summary": "The goal is to create a lovely personal gift easily sendable through the internet. The video postcard project was inspired by the instagrammer <a href='https://www.instagram.com/omgadrian/' target='_blank'> <i>omgadrian</i></a>.",
+    "content": "<h2>Quick overview</h2><p></p>"
+  }
+  

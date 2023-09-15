@@ -105,6 +105,7 @@ a.Project_box{
 .Project_box_title{
     padding: 1rem;
     text-wrap: balance;
+    text-align: center;
 }
 
 .Project_box_description{

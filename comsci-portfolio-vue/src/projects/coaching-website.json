@@ -1,0 +1,22 @@
+{
+    "id": 5,
+    "projectName": "Website for personal business - with Wordpress",
+    "projectURL": "coaching-website",
+    "keywords": ["Wordpress", "Web development", "Frontend"],
+    "languages": "",
+    "researchQuestion": "",
+    "participants": [],
+    "startTime": "2023-01-20",
+    "endTime": "2023-05-01",
+    "notes": {
+      "supervisor": "",
+      "links": {
+        "researchPaperURL": "",
+        "githubPage": "https://beyondthenotes.co.uk/"
+      }
+    },
+    "heroImgName": "beyondthenotes.png",
+    "summary": "I created this website using wordpress. It helped me to learn about the tools, plugins and themes available for wordpress.",
+    "content": ""
+  }
+  

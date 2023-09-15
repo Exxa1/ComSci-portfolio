@@ -30,7 +30,7 @@ export default {
     background-color: var(--c-white);
     width: 100%;
     min-height: 80vh;
-    margin-bottom: 20vh;
+    margin-bottom: 14vh;
     border-radius: 5px;
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
 }

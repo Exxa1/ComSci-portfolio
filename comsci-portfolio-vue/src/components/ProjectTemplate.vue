@@ -43,14 +43,14 @@ export default {
       <div class="Time: ">timeframe: <span class="info">from {{proj.startTime}} to {{ proj.endTime }}</span></div>
       <div class="participants">participants: <span class="info" v-if="proj.participants.length > 0">{{ proj.participants.length+1 }}</span> <span class="info" v-else>solo project</span></div>
       <div class="file" v-if="proj.notes.links.researchPaperURL">Research paper: <span class="info">{{proj.notes.links.researchPaperURL}}</span></div>
-      <div class="file" v-if="proj.notes.links.githubPage">GitHub page: <span class="info"><a :href="proj.notes.links.githubPage" target="_blank">{{proj.notes.links.githubPage}}</a></span></div>
+      <div class="file" v-if="proj.notes.links.githubPage">Website: <span class="info"><a :href="proj.notes.links.githubPage" target="_blank">{{proj.notes.links.githubPage}}</a></span></div>
       <div>Topics: <span class="info">{{ proj.keywords.join(', ') }}</span></div>
       <div v-if="proj.languages">Programming languages: <span class="info">{{ proj.languages.join(', ') }}</span></div>
     </div>
 
     <div class="description">
         <h2>Summary</h2>
-        <p>{{ proj.summary }}</p>
+        <p v-html="proj.summary"></p>
     </div>
     <div v-html="proj.content"></div>
  
@@ -71,6 +71,8 @@ export default {
 
 
 <style>
+
+
 
 h1 {
     text-wrap: balance;
@@ -159,4 +161,11 @@ a.project-goback:hover {
     padding: 0 8px;
     margin:auto;
 }
+
+@media (min-width: 1024px) {
+    .content-max-width{
+    max-width: 80%;
+    }
+}
+
 </style>

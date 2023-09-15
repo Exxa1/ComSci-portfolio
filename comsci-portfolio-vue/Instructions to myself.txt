@@ -3,6 +3,8 @@ npm run build
 firebase deploy
 
 
+Local server: npm run dev
+
 
 If in powershell script is prevented from running, use this to bypass the permission (or use command line):
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
