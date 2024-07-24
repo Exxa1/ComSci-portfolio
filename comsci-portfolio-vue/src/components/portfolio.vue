@@ -16,14 +16,50 @@ components: {
 
 
             <div class="video-portfolio-box">
+                <div class="video-portfolio-text">
+                    <h3>Moving Coffee Bar</h3>
+                    <p>Commercial project made for a business in Copenhagen. A combination of stop motion and video footage to showcase the mobile cafe. </p>
+                    <p class="video-portfolio-dates">2023.10.28</p>
+                </div>
                 <div class="video-portfolio-video">
-                    <iframe src="https://www.youtube.com/embed/gLHZVfgwszg" width="640" height="480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    <iframe src="https://drive.google.com/file/d/1aH1plR7o3zC2OhA_qW9OOuwq3dS5kk9-/preview" width="640" height="480" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
                     </iframe>
                 </div>
+            </div>
+            
+            <div class="video-portfolio-box">
+                <div class="video-portfolio-video">
+                    <iframe src="https://drive.google.com/file/d/1Q86v8oD8rW7mYo3yXuZHYqRtZOxq9Xl7/preview" width="640" height="480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-portfolio-text">
+                    <h3>Bharat Indian Restaurant</h3>
+                    <p>Advertisement video for the restaurant Bharat, based in Copenhagen. The goal of the video is to bring in more customers for the restaurant through facebook advertising.</p>
+                    <p class="video-portfolio-dates">2023.11.20</p>
+                </div>
+            </div>
+
+            <div class="video-portfolio-box">
                 <div class="video-portfolio-text">
                     <h3>The message</h3>
                     <p>The Message is a project film inspired by the quirky and whimsical style of Wes Anderson. The whole production was done by me with essential help from Panna Kovács-Panna and my friends who took part in the film as actors.</p>
                     <p class="video-portfolio-dates">2023.05.04</p>
+                </div>
+                <div class="video-portfolio-video">
+                    <iframe src="https://www.youtube.com/embed/gLHZVfgwszg" width="640" height="480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="video-portfolio-box">
+                <div class="video-portfolio-video">
+                    <iframe src="https://drive.google.com/file/d/1ceoVxDRBwDXwdUBF32IilBSSMbX-OTRr/preview" width="640" height="480" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-portfolio-text">
+                    <h3>Strobolapse</h3>
+                    <p>The video is a playful project having fun with circular shapes around Roskilde.</p>
+                    <p class="video-portfolio-dates">2023.10.05</p>
                 </div>
             </div>
 
@@ -34,14 +70,14 @@ components: {
                     <p class="video-portfolio-dates">2020.05.20</p>
                 </div>
                 <div class="video-portfolio-video">
-                    <iframe src="https://drive.google.com/file/d/1ywbqu5frQJB6i7WdcFlLYJPOPygD6IIn/preview" width="640" height="480" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    <iframe src="https://drive.google.com/file/d/1ywbqu5frQJB6i7WdcFlLYJPOPygD6IIn/preview" width="640" height="480" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
                     </iframe>
                 </div>
             </div>
 
             <div class="video-portfolio-box">
                 <div class="video-portfolio-video">
-                    <iframe src="https://drive.google.com/file/d/1Ov3fxBGJDhkr2sQe5SMv7uT5lwORv9wB/preview" width="640" height="480" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    <iframe src="https://drive.google.com/file/d/1Plf1pmeeg68nZC3IlDV7hn_t05trtJMB/preview" width="640" height="480" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
                     </iframe>
                 </div>
                 <div class="video-portfolio-text">

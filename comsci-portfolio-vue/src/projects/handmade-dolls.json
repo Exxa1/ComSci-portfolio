@@ -1,0 +1,22 @@
+{
+    "id": 1,
+    "projectName": "Nuxt full-stack website using serverless functions",
+    "projectURL": "nuxt-fullstack-website",
+    "keywords": ["Web development", "Frontend", "Backend"],
+    "languages": ["Vue", "JavaScript", "HTML", "CSS", "NUXT", "Tailwind CSS"],
+    "researchQuestion": "",
+    "participants": [],
+    "startTime": "2024-05-03",
+    "endTime": "ongoing",
+    "notes": {
+      "supervisor": "",
+      "links": {
+        "researchPaperURL": "",
+        "githubPage": "https://github.com/Exxa1/Handmade-dolls-ws"
+      }
+    },
+    "heroImgName": "dolls-hero.png",
+    "summary": "Building a full-stack website to showcase and practice my web development skills. The website is created using the NUXT framework.",
+    "content": "<h2>Quick overview</h2><p>Building a full-stack website to showcase and practice my web development skills. The website is created using the NUXT framework. Most of the programming is done in Vue and Js. The front-end is developed using Tailwind CSS. The website is hosted on Netlify, utilizing the company's serverless function option. The whole project is version-controlled using Git and GitHub. </br> </br> The whole project is made from scratch. Developing the website gave me useful insights into how to utilize modules in NUXT and what a powerful framework it is.</p>"
+  }
+  

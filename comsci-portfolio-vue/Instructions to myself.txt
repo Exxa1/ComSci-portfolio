@@ -1,6 +1,8 @@
-To update the website, run in the project folder (comsci-portfolio-vue):
+To update the website, run in the project folder (comsci-portfolio-vue) in command prompt:
 npm run build
 firebase deploy
+
+(not gonna work in powershell, use command prompt)
 
 
 Local server: npm run dev
